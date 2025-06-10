@@ -1,0 +1,21 @@
+install node js
+vs code
+live server
+
+creating react app
+official - create react app(cra)
+modern - vite
+it produces quick and small bundle size
+use npm run dev for vite
+use npm start for cra
+ 
+npm create vite@latest
+
+
+npm install in the folder where theere is app
+
+public - static files
+
+src - main code
+
+hence creating a react app

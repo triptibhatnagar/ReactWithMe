@@ -1,0 +1,22 @@
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+input  {
+    width: 100%; /*parent ki width lelo*/
+}
+
+.items-container {
+    text-align: left;
+}
+
+.todo-row{
+    margin: 7px 3px;
+}
+
+.todo-btn {
+    min-width: 80px;
+}

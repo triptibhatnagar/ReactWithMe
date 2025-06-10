@@ -1,0 +1,12 @@
+.js , .jsx(react)
+
+components defined as functions - functional componontes
+class based are also there but not used 
+
+babeljs.io/repl tool allows you to see how jsx transformed into js
+
+names of funtions - capitalized to recognize custom components, but its just a convention
+
+if css for module specific - we can make modules
+
+componets are resusable
