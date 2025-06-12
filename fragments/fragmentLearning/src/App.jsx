@@ -18,6 +18,13 @@ function App() {
   // props : from parent to child
 
   // let emptyMsg = foodItems.length === 0 ? <h3>I am still hungry</h3> : null
+
+  let textToShow = "Food Item entered by user"
+
+  const handleOnChange = (e) => {
+    console.log(e.target.value)
+    textToShow = e.target.value // but textToShow remain as it is
+  }
   return <>
   {/* passing children to a container - props.children */}
     <Container>
@@ -26,7 +33,8 @@ function App() {
       {/* {emptyMsg} */}
       {/* {foodItems.length === 0 && <h3>I am still hungry</h3>} */}
       <ErrorMsg items={foodItems}/>
-      <FoodInput/>
+      <FoodInput handleOnChange={handleOnChange}/>
+      <p>{textToShow}</p>
       <FoodItems items={foodItems}/>
       {/* </React.Fragment> */}
     </Container>
