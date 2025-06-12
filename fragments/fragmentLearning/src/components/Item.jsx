@@ -1,6 +1,6 @@
 import styles from "./Item.module.css"
 
-const Item = ({foodItem, handleBuyBtn}) => {
+const Item = ({foodItem, handleBuyBtn, bought}) => {
 
     // const handleByBtn = (foodItem) => {
     //     console.log(`Item being bought: ${foodItem}`)
@@ -17,7 +17,7 @@ const Item = ({foodItem, handleBuyBtn}) => {
     // return <li class="list-group-item">{props.foodItem}</li>
 
     // css modules
-    return <li className={`${styles['item-span']} ${styles['each-item']} list-group-item`}>
+    return <li className={`${styles['item-span']} ${styles['each-item']} list-group-item ${bought && "active"}`}>
         <span className="item-span">{foodItem}</span>
         <button className={`${styles.button} btn btn-info`} onClick={(e) => handleBuyBtn(e)}>Buy</button> 
         {/* onClick={() => handleByBtn(foodItem) */}
