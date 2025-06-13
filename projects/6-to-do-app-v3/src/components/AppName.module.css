@@ -1,0 +1,8 @@
+.todoHeading {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+/* bracket notation na use krna pde isliye not using - in class name, so camel case is used */
