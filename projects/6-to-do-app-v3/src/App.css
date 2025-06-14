@@ -3,5 +3,6 @@
 }
 
 .todo-btn {
-    min-width: 80px;
+    min-width: 60px;
+    /* border-radius: 50%; */
 }

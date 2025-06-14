@@ -1,9 +1,11 @@
 import { useState } from "react"
 import styles from "./AddToDo.module.css"
+// import { BiMessageAdd } from 'react-icons/bi'
+import { MdAddCircleOutline } from "react-icons/md";
 
 function AddToDo({handleNewItem}) {
-    const [todoName, setToDoName] = useState()
-    const [todoDate, setToDoDate] = useState()
+    const [todoName, setToDoName] = useState("")
+    const [todoDate, setToDoDate] = useState("")
 
     const handleNameChange= (e) => {
         setToDoName(e.target.value)
@@ -26,7 +28,8 @@ function AddToDo({handleNewItem}) {
             <input className={styles.inputContainer} type="date" value={todoDate} onChange={handleDateChange}/>
             </div>
             <div className="col-2">
-            <button type="button" className="btn btn-success todo-btn" onClick={handleAddBtnClicked}>Add</button>
+            <button type="button" className="btn btn-success todo-btn" onClick={handleAddBtnClicked}><MdAddCircleOutline/></button>
+            
             </div>
         </div>
     </div>
