@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./AddToDo.module.css";
 // import { BiMessageAdd } from 'react-icons/bi'
 import { MdAddCircleOutline } from "react-icons/md";
@@ -6,12 +6,15 @@ import { MdAddCircleOutline } from "react-icons/md";
 function AddToDo({ handleNewItem }) {
   const [todoName, setToDoName] = useState("");
   const [todoDate, setToDoDate] = useState("");
+  const noOfUpdates = useRef(0) 
 
   const handleNameChange = (e) => {
     setToDoName(e.target.value);
+    noOfUpdates.current += 1;
   };
   const handleDateChange = (e) => {
     setToDoDate(e.target.value);
+    console.log(`NO of updates are ${noOfUpdates.current}`)
   };
   const handleAddBtnClicked = (e) => {
     //   console.log(e)
