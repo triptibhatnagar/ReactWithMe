@@ -1,0 +1,16 @@
+// states wanted, but no repaint req => useRef
+const noOfUpdates = useRef(0) 
+0 is initial value here
+// b/w rendreing cycles, its value will update, but no repaint is done
+// noOfUpdates is just a reference, therefore, noofupdates.current OR noofupdates.current.value is done to get value
+// set noofupdates
+    noOfUpdates.current += 1;
+
+
+while typing in input, useState is repainting the cycle for evry alphabet we type, to avoid such many repaints, we can use useRef
+
+ref attribute
+
+now no need for state change, and no need for handler methods that we created, no need for two way binding
+
+performance enhanced

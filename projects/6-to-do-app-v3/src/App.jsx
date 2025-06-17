@@ -20,8 +20,13 @@ function App() {
   
   let handleNewItem = (itemName, itemDate) => {
     // console.log(itemName, itemDate)
-    const newToDoItems = [...todoItem, {name: itemName, dueDate: itemDate}]
-    setToDoItem(newToDoItems)
+    // const newToDoItems = [...todoItem, {name: itemName, dueDate: itemDate}]
+    // setToDoItem(newToDoItems)
+
+    // setting new value based on current value
+    setToDoItem((currVal) => {
+      return [...currVal, {name: itemName, dueDate: itemDate}]
+    })
   }
 
   let handleDeleteItem = (itemName) => {//deleting by name

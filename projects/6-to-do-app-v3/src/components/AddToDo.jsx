@@ -4,24 +4,30 @@ import styles from "./AddToDo.module.css";
 import { MdAddCircleOutline } from "react-icons/md";
 
 function AddToDo({ handleNewItem }) {
-  const [todoName, setToDoName] = useState("");
-  const [todoDate, setToDoDate] = useState("");
-  const noOfUpdates = useRef(0) 
+  // const [todoName, setToDoName] = useState("");
+  // const [todoDate, setToDoDate] = useState("");
+  const todoNameElem = useRef() 
+  const todoDateElem = useRef() 
 
-  const handleNameChange = (e) => {
-    setToDoName(e.target.value);
-    noOfUpdates.current += 1;
-  };
-  const handleDateChange = (e) => {
-    setToDoDate(e.target.value);
-    console.log(`NO of updates are ${noOfUpdates.current}`)
-  };
+  // const handleNameChange = (e) => {
+  //   setToDoName(e.target.value);
+  //   noOfUpdates.current += 1;
+  // };
+  // const handleDateChange = (e) => {
+  //   setToDoDate(e.target.value);
+  //   console.log(`NO of updates are ${noOfUpdates.current}`)
+  // };
   const handleAddBtnClicked = (e) => {
     //   console.log(e)
       e.preventDefault()
-      handleNewItem(todoName, todoDate);
-      setToDoName("");
-      setToDoDate("");
+      let todoName = todoNameElem.current.value
+      let dueDate = todoDateElem.current.value
+      console.log(`${todoName} due on: ${dueDate}`)
+      handleNewItem(todoName, dueDate);
+      todoNameElem.current.value = ""
+      todoDateElem.current.value = ""
+      // setToDoName("");
+      // setToDoDate("");
   };
   return (
     <>
@@ -44,16 +50,18 @@ function AddToDo({ handleNewItem }) {
               className={styles.inputContainer}
               type="text"
               placeholder="Enter ToDo here"
-              value={todoName}
-              onChange={handleNameChange}
+              // value={todoName}
+              // onChange={handleNameChange}
+              ref={todoNameElem}
             />
           </div>
           <div className="col-3">
             <input
               className={styles.inputContainer}
               type="date"
-              value={todoDate}
-              onChange={handleDateChange}
+              // value={todoDate}
+              // onChange={handleDateChange}
+              ref={todoDateElem}
             />
           </div>
           <div className="col-2">

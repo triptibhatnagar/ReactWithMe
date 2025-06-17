@@ -1,0 +1,14 @@
+ What is 2-way binding?
+It means:
+✅ UI (input box) updates the state (data)
+✅ State (data) updates the UI (input box)
+
+So, changes in either side will reflect on the other.
+
+1. User types in input box ➡️ handleChange runs ➡️ name state updates
+
+2. State updates ➡️ value={name} makes input box show latest value
+
+3. Below text also shows the updated name from state
+
+This back-and-forth connection is called 2-way binding
