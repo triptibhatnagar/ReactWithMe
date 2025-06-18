@@ -1,0 +1,15 @@
+UPDATE STATE FROM PREVIOUS STATE
+
+const newToDoItems = [...todoItem, {name: itemName, dueDate: itemDate}]
+... spread operator is used
+
+set on the basis of old value
+setItem((currValue) =>  [
+    ...currVal, 
+    {name: itemName, dueDate: itemDate}
+    ]
+)
+
+
+1. spread operator 
+2. functional updates

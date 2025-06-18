@@ -1,3 +1,14 @@
+USEREF()
+
+to get a reference to a DOM node without causing re-renders.
+To store a reference to the DOM node, and access it without triggering re-renders.
+
+
+usecases :-
+i. Accessing DOM elements
+ii. Keep mutable values
+iii. Avoid unnecessary re-renders
+
 // states wanted, but no repaint req => useRef
 const noOfUpdates = useRef(0) 
 0 is initial value here
@@ -14,3 +25,10 @@ ref attribute
 now no need for state change, and no need for handler methods that we created, no need for two way binding
 
 performance enhanced
+
+
+useRef allows access to dom elements and retains multiple values without re renders
+used with ref attribute for direct dom intercations.
+can hold previous state or prop values
+not limited to dom refernces =, can hold any value
+refs can be passed as props also

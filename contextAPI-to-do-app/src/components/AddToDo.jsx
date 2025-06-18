@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import styles from "./AddToDo.module.css";
 // import { BiMessageAdd } from 'react-icons/bi'
 import { MdAddCircleOutline } from "react-icons/md";
+import { ToDoItemsContext } from "../store/todoitems-store";
 
 function AddToDo({ handleNewItem }) {
+  const {addNewItem} = useContext(ToDoItemsContext)
   // const [todoName, setToDoName] = useState("");
   // const [todoDate, setToDoDate] = useState("");
   const todoNameElem = useRef() 
@@ -23,7 +25,7 @@ function AddToDo({ handleNewItem }) {
       let todoName = todoNameElem.current.value
       let dueDate = todoDateElem.current.value
       console.log(`${todoName} due on: ${dueDate}`)
-      handleNewItem(todoName, dueDate);
+      addNewItem(todoName, dueDate);
       todoNameElem.current.value = ""
       todoDateElem.current.value = ""
       // setToDoName("");

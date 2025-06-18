@@ -1,0 +1,31 @@
+CONTEXT API
+
+common shared storage among all the components
+
+value pass krne k ways
+props
+state
+3rd wat - context api
+
+state shared among multiple components, we write state in their shared parent
+but somethings things get compex by bubble up again and agian, it reacheds to root elem, at the end, most states are collected there, which are not used by root even.
+this is called prop drilling
+i.e props get drilled and drilled and reach to parent eventually but are not using it
+
+
+
+
+ToDoItemsContext.Provider: react component wrapping up the children in which context will be available
+
+whenever value given inside Context provider changes, repaint of whiole in b/w context provider is done,
+so don't take that value which is frequently updated
+
+
+
+1.Prop Drilling: Context API addresses prop drilling. component composition is an alternative
+2. Folder SEtup : use a store folder for context files
+3. Initialization : use react.createContext with initial state and export it
+4. Provider: implement with contextName.Provider in components
+5. Access value:  use the useContext hook
+6. Dynamic data combining context value with state next time export functions contacts can also export functions for actions
+7. Logic separation: this helps keep the UI and business logic separate from each other

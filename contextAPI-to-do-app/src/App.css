@@ -1,0 +1,8 @@
+.todo-row{
+    margin: 7px 3px;
+}
+
+.todo-btn {
+    min-width: 60px;
+    /* border-radius: 50%; */
+}
