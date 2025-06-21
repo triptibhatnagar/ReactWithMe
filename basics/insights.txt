@@ -1,0 +1,43 @@
+normal html, css, js works on real dom, whole re-rendering of dom is done, no robust and efficient application
+Facebook made react
+react works on virtual dom, re-rendering is not done for whole application
+react makes UI, react-dom connects react and your browser or dom
+
+react and react-dom ccdn links
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+virtual dom - making copies of real dom
+we dont directly interact with real dom in react, we will interact with react
+
+
+SETUP
+npm create-react-app
+npm create vite (bundler or tool to make react js complete folder)
+install node js
+node -v on terminal
+npm i : inside the folder created from vite
+npm run dev : start the folder
+
+
+FOLDERS & FILES
+node_modules
+index.html
+linked main.jsx
+
+
+JSX
+javascript xml - combo of html and js
+
+
+FLOW
+App.jsx -> main.jsx -> index.html
+
+
+HOOKS
+special type of functions
+provide state mgmt, lifecycle methods, optimization, side stack things, dom manipulation, custom features with custom hooks
+
+MAKING VARIABLES IN REACT
+via useState hooks
