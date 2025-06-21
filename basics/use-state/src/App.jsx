@@ -23,7 +23,7 @@ const App = () => {
     //   <button onClick={changeA}>Change A</button>
     // </div>
     <div>
-      <h2>Counter: {cnt}</h2>
+      <h2 className='text-5xl bg-zinc-500'>Counter: {cnt}</h2>
       <button onClick={incCnt}>Increment</button>
       <button onClick={decCnt}>Decrement</button>
     </div>
