@@ -41,3 +41,72 @@ provide state mgmt, lifecycle methods, optimization, side stack things, dom mani
 
 MAKING VARIABLES IN REACT
 via useState hooks
+
+ATTACHING CSS
+if css file imported in main.jsx, it will also applied to App.jsx as main.jsx is parent of App.jsx
+
+normal css and module css
+tailwind css : see on official site
+
+FORM HANDLING
+preventDefault()
+
+TWO-WAY BINDING
+UI (input box) updates the state (data)
+State (data) updates the UI (input box)
+
+FRAGMENTS
+empty tags
+
+COMPONENTS
+small reusable parts
+
+
+PROPS AND PROPS DRILLING
+passing dat in components
+
+data comes from top to bottom always
+
+INTEGRATING API(AXIOS)
+data from backend to frontend => API needed
+API are like waiter
+
+api in form of promises
+
+axios.get()
+async await
+
+
+USEEFFECT()
+useEffect in React is a hook that lets you run some code after your component renders.
+useEffect lets you do things like fetching data or changing the DOM after rendering, and helps manage side effects in your component.
+
+useEffect(() => {
+    first
+    return () => {
+      second
+    }
+  }, [third])
+
+
+REACT TOASTIFY
+for flash messages
+
+
+ROUTING
+we use react-router-dom
+different types of routers are there like browser router etc..
+
+wrap App into browser router
+
+Routes
+  Route
+  path, element
+
+1. wrap app into BrowserRouter
+2. then make Routes , Route with 'path' and 'element'
+3. Link with 'to'
+
+CONTEXT-API
+props are send from top to bottom
+context-api is used to centralize the data
