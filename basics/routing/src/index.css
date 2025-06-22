@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+}
